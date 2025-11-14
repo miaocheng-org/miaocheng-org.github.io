@@ -33,6 +33,7 @@ colors:
     brand: '#007ACC' # Example color: a nice blue. Choose any hex code you like.
 
 header_pages:
-  - about.md
   - Research.md
+  - Publication.md
+  
   
