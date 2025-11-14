@@ -6,17 +6,16 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 #
 layout: home
-title: about me
+title: Miao Cheng / 程 苗
 ---
-## Miao Cheng
 [About](#about) • [Research](#research) • [Publications](#publications)
 
 ## About
 Short bio in English/Japanese…
 
 ## Research
-- **Redirected Drawing** — one-line summary  
-- **VirtuEleDent** — one-line summary  
+- **DIEM-A Database** — one-line summary  
+- **Embodied Emotion** — one-line summary  
 (Add images with standard Markdown syntax if you like.)
 
 ## Publications
