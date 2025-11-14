@@ -19,9 +19,9 @@ theme: minima
 title: Miao Cheng, Tohoku University
 author:
   name: Miao Cheng
-  email: cheng@tohoku.ac.jp
-description: >
-  Write a brief description of your site here.
+  email: cheng[at]tohoku.ac.jp
+# description: >
+#   Write a brief description of your site here.
 
 # 3. Minima-specific settings (required to resolve the SASS error)
 minima:
