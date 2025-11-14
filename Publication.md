@@ -21,3 +21,5 @@ permalink: /Publication/
 7.	Chia-Hsiang Ma, Yi-Ting Yu, Lee-Xieng Yang, Chia-Huei Tseng & Miao Cheng. (2025, Oct) Culture Differences on Emotional Expression and Emotional Classification. 13th International Conference on Affective Computing and Intelligent Interaction Workshops and Demos (ACIIW ’25), Canberra, Australia.
 8.	Yang, X.*, Cheng, M.*, Fujiwara, K., Cai, Y., Kitamura, Y., & Tseng, C. (2025, Apr). Culture Matters in Humanness Recognition for Human Body Motion. In Proceedings of the Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA '25).
 
+##### * Co-first author       † Corresponding author
+
