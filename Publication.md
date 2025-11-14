@@ -3,7 +3,7 @@ layout: page
 title: 
 permalink: /Publication/
 ---
-### Selected Conference Papers 
+### Selected Journal Papers 
 #### 1.	Cheng, M., Tseng, C. H., Fujiwara, K., Higashiyama, S., Weng, A., & Kitamura, Y. (2025). Toward an Asian-based bodily movement database for emotional communication. Behavior Research Methods, 57(1), 1-16.
 #### 2.	Yang, X.Y.*, Cheng, M.*, Fujiwara, K., S., Kitamura, Y., Shioiri, S., & Tseng, C.-H. (2024). What makes a movement human-like? Japanese Psychological Research. https://doi.org/10.1111/jpr.12542
 #### 3.	Shehata, M., Cheng, M., Leung, A., Tsuchiya, N., Wu, D. A., Tseng, C. H., ... & Shimojo, S. (2021). Team Flow Is a Unique Brain State Associated with Enhanced Information Integration and Interbrain Synchrony. Eneuro, 8(5). 
