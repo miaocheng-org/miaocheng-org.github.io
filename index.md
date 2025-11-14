@@ -8,3 +8,17 @@
 layout: home
 title: about me
 ---
+## Miao Cheng
+[About](#about) • [Research](#research) • [Publications](#publications)
+
+## About
+Short bio in English/Japanese…
+
+## Research
+- **Redirected Drawing** — one-line summary  
+- **VirtuEleDent** — one-line summary  
+(Add images with standard Markdown syntax if you like.)
+
+## Publications
+- 2025 — Title. *Venue*. [paper](#) · [video](#)
+- 2024 — Title. *Venue*. [paper](#)
