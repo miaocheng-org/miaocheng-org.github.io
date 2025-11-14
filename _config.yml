@@ -19,13 +19,15 @@ theme: minima
 title: Miao Cheng, Tohoku University
 author:
   name: Miao Cheng
-  email: cheng*tohoku.ac.jp
+  email: cheng@tohoku.ac.jp
 description: >
   Write a brief description of your site here.
 
 # 3. Minima-specific settings (required to resolve the SASS error)
 minima:
   skin: auto # Or 'classic', 'dark', 'light', etc.
+  linkedin_username: linkedin.com/in/miao-cheng-0374845b
+  
   
   # 4. To resolve the SASS error, we explicitly define the brand color as a static SASS color
   #    instead of the incompatible CSS variable (var(--minima-brand-color)).
