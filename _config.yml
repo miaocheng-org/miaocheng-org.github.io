@@ -29,6 +29,10 @@ minima:
   
   # 4. To resolve the SASS error, we explicitly define the brand color as a static SASS color
   #    instead of the incompatible CSS variable (var(--minima-brand-color)).
-  colors:
+colors:
     brand: '#007ACC' # Example color: a nice blue. Choose any hex code you like.
+
+header_pages:
+  - about.md
+  - Research.md
   
