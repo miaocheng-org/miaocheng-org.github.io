@@ -12,39 +12,14 @@
 # - jekyll-remote-theme # add this line to the plugins list if you already have one
 
 # # minima from https://github.com/jekyll/minima
-# theme: minima
-# remote_theme: "jekyll/minima@1e8a445"
-# plugins:
-#  - jekyll-feed
-#  - jekyll-seo-tag
-
-# minima:
-#   skin: auto
-#   # Minima skin selection. Available skins are:
-#   #   * classic            Default, light color scheme.
-#   #   * dark               Dark variant of the classic skin.
-#   #   * auto               Adaptive skin based on the classic and dark skins.
-#   #   * solarized-light    Light variant of solarized color scheme.
-#   #   * solarized-dark     Dark variant of solarized color scheme.
-#   #   * solarized          Adaptive skin for solarized color scheme skins.
-# colors:
-#     brand: '#666666' # Replaces --minima-brand-color with a static SASS color
-#     grey-color: '#828282'
-#     grey-color-light: '#eee'
-#     grey-color-dark: '#1e1e1e'
-
-# title: 
-#   Miao Cheng 
-#   Tohoku University
-
 # 1. Activate the Minima Theme
 theme: minima
 
 # 2. Add Site-wide settings (required by many themes/plugins)
-title: Your Awesome Personal Website
+title: Miao Cheng, Tohoku University
 author:
-  name: Your Name
-  email: your-email@domain.com
+  name: Miao Cheng
+  email: cheng*tohoku.ac.jp
 description: >
   Write a brief description of your site here.
 
