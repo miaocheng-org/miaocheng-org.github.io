@@ -14,8 +14,8 @@ title: Miao Cheng / 程 苗
 Short bio in English/Japanese…
 
 ## Research
-- **DIEM-A Database** — one-line summary  
-- **Embodied Emotion** — one-line summary  
+- **DIEM-A Database** 
+- **Embodied Emotion** 
 (Add images with standard Markdown syntax if you like.)
 
 ## Publications
