@@ -16,7 +16,7 @@ Short bio in English/Japanese…
 ## Research
 - **DIEM-A Database** 
 - **Embodied Emotion** 
-(Add images with standard Markdown syntax if you like.)
+
 
 ## Publications
 - 2025 — Title. *Venue*. [paper](#) · [video](#)
