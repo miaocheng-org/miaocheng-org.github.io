@@ -1,0 +1,64 @@
+{
+  "name": "Victor",
+  "role": "AI Research Scientist",
+  "tagline": "AI researcher in affective computing",
+  "bio": "I'm an AI researcher at Tohoku University (Japan), working mainly with body motion data and graph convolutional models. My research focuses on understanding human emotions through movement patterns.",
+  "avatar": "/avatar.jpg",
+  "email": "victor@example.com",
+  "location": "Sendai, Japan",
+  "affiliations": [
+    {
+      "name": "Tohoku University",
+      "url": "https://www.tohoku.ac.jp/en/"
+    }
+  ],
+  "social": [
+    { "name": "GitHub", "url": "https://github.com/VictorS-67", "icon": "github" },
+    { "name": "Google Scholar", "url": "https://scholar.google.com/", "icon": "scholar" },
+    { "name": "LinkedIn", "url": "https://linkedin.com/in/", "icon": "linkedin" },
+    { "name": "ORCID", "url": "https://orcid.org/", "icon": "orcid" }
+  ],
+  "interests": [
+    "Affective Computing",
+    "Graph Neural Networks",
+    "Body Motion Analysis",
+    "Human-Computer Interaction"
+  ],
+  "education": [
+    {
+      "degree": "PhD Computer Science",
+      "institution": "Tohoku University",
+      "start": "2022",
+      "end": "Present",
+      "summary": "Research on emotion recognition from body motion using graph convolutional networks."
+    },
+    {
+      "degree": "MS Computer Science",
+      "institution": "Your University",
+      "start": "2020",
+      "end": "2022"
+    },
+    {
+      "degree": "BS Computer Science",
+      "institution": "Your University",
+      "start": "2016",
+      "end": "2020"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Research Assistant",
+      "organization": "Tohoku University",
+      "start": "2022",
+      "end": "Present",
+      "summary": "Conducting research on affective computing and motion analysis."
+    }
+  ],
+  "skills": [
+    { "name": "Python", "level": 5 },
+    { "name": "PyTorch", "level": 5 },
+    { "name": "Graph Neural Networks", "level": 4 },
+    { "name": "Computer Vision", "level": 4 },
+    { "name": "Machine Learning", "level": 5 }
+  ]
+}

@@ -1,0 +1,126 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import author from '../data/author.json';
+
+const publications = await getCollection('publications');
+const sortedPubs = publications.sort((a, b) => b.data.year - a.data.year);
+
+// Group by type
+const conferences = sortedPubs.filter(p => p.data.type === 'conference');
+const journals = sortedPubs.filter(p => p.data.type === 'journal');
+const preprints = sortedPubs.filter(p => p.data.type === 'preprint');
+---
+
+<Base title={`Publications - ${author.name}`}>
+  <section class="py-16">
+    <h1 class="text-4xl font-bold text-[var(--text-primary)] mb-2">Publications</h1>
+    <p class="text-[var(--text-secondary)] mb-12">My research papers and articles</p>
+
+    {conferences.length > 0 && (
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold text-[var(--text-primary)] mb-6">Conference Papers</h2>
+        <div class="space-y-4">
+          {conferences.map((pub) => (
+            <article class="card">
+              <div class="flex items-start gap-4">
+                <div class="shrink-0 mt-1">
+                  {pub.data.featured && (
+                    <span class="inline-block w-2 h-2 rounded-full bg-[var(--color-primary-500)]" title="Featured"></span>
+                  )}
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-2">
+                    {pub.data.title}
+                  </h3>
+                  <p class="text-sm text-[var(--text-secondary)] mb-2">
+                    {pub.data.authors.join(', ')}
+                  </p>
+                  <p class="text-sm text-[var(--color-primary-600)] dark:text-[var(--color-primary-400)] mb-3">
+                    {pub.data.venue} ({pub.data.year})
+                  </p>
+                  {pub.data.abstract && (
+                    <details class="group">
+                      <summary class="text-sm text-[var(--text-secondary)] cursor-pointer hover:text-[var(--text-primary)]">
+                        Show abstract
+                      </summary>
+                      <p class="text-sm text-[var(--text-secondary)] mt-2 pl-4 border-l-2 border-[var(--border-color)]">
+                        {pub.data.abstract}
+                      </p>
+                    </details>
+                  )}
+                  <div class="flex gap-3 mt-4">
+                    {pub.data.doi && (
+                      <a href={`https://doi.org/${pub.data.doi}`} target="_blank" rel="noopener" class="text-xs px-3 py-1 rounded bg-[var(--bg-primary)] border border-[var(--border-color)] hover:border-[var(--color-primary-500)] no-underline">
+                        DOI
+                      </a>
+                    )}
+                    {pub.data.code && (
+                      <a href={pub.data.code} target="_blank" rel="noopener" class="text-xs px-3 py-1 rounded bg-[var(--bg-primary)] border border-[var(--border-color)] hover:border-[var(--color-primary-500)] no-underline">
+                        Code
+                      </a>
+                    )}
+                    {pub.data.pdf && (
+                      <a href={pub.data.pdf} target="_blank" rel="noopener" class="text-xs px-3 py-1 rounded bg-[var(--bg-primary)] border border-[var(--border-color)] hover:border-[var(--color-primary-500)] no-underline">
+                        PDF
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {journals.length > 0 && (
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold text-[var(--text-primary)] mb-6">Journal Articles</h2>
+        <div class="space-y-4">
+          {journals.map((pub) => (
+            <article class="card">
+              <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-2">
+                {pub.data.title}
+              </h3>
+              <p class="text-sm text-[var(--text-secondary)] mb-2">
+                {pub.data.authors.join(', ')}
+              </p>
+              <p class="text-sm text-[var(--color-primary-600)] dark:text-[var(--color-primary-400)]">
+                {pub.data.venue} ({pub.data.year})
+              </p>
+              <div class="flex gap-3 mt-4">
+                {pub.data.doi && (
+                  <a href={`https://doi.org/${pub.data.doi}`} target="_blank" rel="noopener" class="text-xs px-3 py-1 rounded bg-[var(--bg-primary)] border border-[var(--border-color)] hover:border-[var(--color-primary-500)] no-underline">
+                    DOI
+                  </a>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {preprints.length > 0 && (
+      <div>
+        <h2 class="text-2xl font-bold text-[var(--text-primary)] mb-6">Preprints</h2>
+        <div class="space-y-4">
+          {preprints.map((pub) => (
+            <article class="card">
+              <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-2">
+                {pub.data.title}
+              </h3>
+              <p class="text-sm text-[var(--text-secondary)] mb-2">
+                {pub.data.authors.join(', ')}
+              </p>
+              <p class="text-sm text-[var(--color-primary-600)] dark:text-[var(--color-primary-400)]">
+                {pub.data.venue} ({pub.data.year})
+              </p>
+            </article>
+          ))}
+        </div>
+      </div>
+    )}
+  </section>
+</Base>
