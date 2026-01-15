@@ -1,28 +1,27 @@
 {
-  "name": "Victor",
-  "role": "AI Research Scientist",
-  "tagline": "AI researcher in affective computing",
-  "bio": "I'm an AI researcher at Tohoku University (Japan), working mainly with body motion data and graph convolutional models. My research focuses on understanding human emotions through movement patterns.",
+  "name": "Miao Cheng",
+  "role": "Assistant Professor",
+  "tagline": "Assistant Professor at Tohoku University",
+  "bio": "Assistant Professor at Research Institute of Electrical Communication, Tohoku University. Research interests include Social Neuroscience and Nonverbal Communication.",
   "avatar": "/avatar.jpg",
-  "email": "victor@example.com",
+  "email": "miao.cheng@riec.tohoku.ac.jp",
   "location": "Sendai, Japan",
   "affiliations": [
     {
-      "name": "Tohoku University",
-      "url": "https://www.tohoku.ac.jp/en/"
+      "name": "Research Institute of Electrical Communication, Tohoku University",
+      "url": "https://www.riec.tohoku.ac.jp/"
     }
   ],
   "social": [
-    { "name": "GitHub", "url": "https://github.com/VictorS-67", "icon": "github" },
-    { "name": "Google Scholar", "url": "https://scholar.google.com/", "icon": "scholar" },
-    { "name": "LinkedIn", "url": "https://linkedin.com/in/", "icon": "linkedin" },
-    { "name": "ORCID", "url": "https://orcid.org/", "icon": "orcid" }
+    {
+      "name": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=IQ3GHacAAAAJ&hl=en",
+      "icon": "scholar"
+    }
   ],
   "interests": [
-    "Affective Computing",
-    "Graph Neural Networks",
-    "Body Motion Analysis",
-    "Human-Computer Interaction"
+    "Social Neuroscience",
+    "Nonverbal Communication"
   ],
   "education": [
     {
@@ -55,10 +54,25 @@
     }
   ],
   "skills": [
-    { "name": "Python", "level": 5 },
-    { "name": "PyTorch", "level": 5 },
-    { "name": "Graph Neural Networks", "level": 4 },
-    { "name": "Computer Vision", "level": 4 },
-    { "name": "Machine Learning", "level": 5 }
+    {
+      "name": "Python",
+      "level": 5
+    },
+    {
+      "name": "PyTorch",
+      "level": 5
+    },
+    {
+      "name": "Graph Neural Networks",
+      "level": 4
+    },
+    {
+      "name": "Computer Vision",
+      "level": 4
+    },
+    {
+      "name": "Machine Learning",
+      "level": 5
+    }
   ]
 }
