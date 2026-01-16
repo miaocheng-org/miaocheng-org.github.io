@@ -25,8 +25,8 @@
   ],
   "education": [
     {
-      "degree": "PhD Computer Science",
-      "institution": "Tohoku University",
+      "degree": "PhD in Psychology",
+      "institution": "University of Hong Kong",
       "start": "2022",
       "end": "Present",
       "summary": "Research on emotion recognition from body motion using graph convolutional networks."
