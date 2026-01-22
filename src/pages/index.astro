@@ -1,10 +1,13 @@
 ---
-import Base from '../layouts/Base.astro';
-import SocialLinks from '../components/SocialLinks.astro';
-import author from '../data/author.json';
-import { getCollection } from 'astro:content';
+import Base from "../layouts/Base.astro";
+import SocialLinks from "../components/SocialLinks.astro";
+import author from "../data/author.json";
+import { getCollection } from "astro:content";
 
-const featuredPubs = await getCollection('publications', ({ data }) => data.featured);
+const featuredPubs = await getCollection(
+  "publications",
+  ({ data }) => data.featured,
+);
 ---
 
 <Base title={`${author.name} - ${author.role}`}>
@@ -13,7 +16,9 @@ const featuredPubs = await getCollection('publications', ({ data }) => data.feat
     <div class="flex flex-col md:flex-row items-center gap-8">
       <!-- Avatar -->
       <div class="shrink-0">
-        <div class="w-48 h-48 rounded-full bg-gradient-to-br from-[var(--color-primary-400)] to-[var(--color-primary-600)] flex items-center justify-center text-white text-6xl font-bold">
+        <div
+          class="w-48 h-48 rounded-full bg-gradient-to-br from-[var(--color-primary-400)] to-[var(--color-primary-600)] flex items-center justify-center text-white text-6xl font-bold"
+        >
           {author.name.charAt(0)}
         </div>
       </div>
@@ -23,16 +28,18 @@ const featuredPubs = await getCollection('publications', ({ data }) => data.feat
         <h1 class="text-4xl font-bold text-[var(--text-primary)] mb-2">
           {author.name}
         </h1>
-        <p class="text-xl text-[var(--color-primary-600)] dark:text-[var(--color-primary-400)] mb-4">
+        <p
+          class="text-xl text-[var(--color-primary-600)] dark:text-[var(--color-primary-400)] mb-4"
+        >
           {author.role}
         </p>
         <p class="text-[var(--text-secondary)] mb-2">
-          {author.affiliations.map((a) => a.name).join(' • ')}
+          {author.affiliations.map((a) => a.name).join(" • ")}
         </p>
         <p class="text-[var(--text-secondary)] max-w-xl mb-6">
           {author.bio}
         </p>
-        
+
         <SocialLinks />
       </div>
     </div>
@@ -40,80 +47,143 @@ const featuredPubs = await getCollection('publications', ({ data }) => data.feat
 
   <!-- Research Interests -->
   <section>
-    <h2 class="text-2xl font-bold text-[var(--text-primary)] mb-6">Research Interests</h2>
+    <h2 class="text-2xl font-bold text-[var(--text-primary)] mb-6">
+      Research Interests
+    </h2>
     <div class="flex flex-wrap gap-2">
-      {author.interests.map((interest) => (
-        <span class="px-4 py-2 rounded-full bg-[var(--color-primary-100)] dark:bg-[var(--color-primary-900)] text-[var(--color-primary-700)] dark:text-[var(--color-primary-300)] text-sm font-medium">
-          {interest}
-        </span>
-      ))}
+      {
+        author.interests.map((interest) => (
+          <span class="px-4 py-2 rounded-full bg-[var(--color-primary-100)] dark:bg-[var(--color-primary-900)] text-[var(--color-primary-700)] dark:text-[var(--color-primary-300)] text-sm font-medium">
+            {interest}
+          </span>
+        ))
+      }
     </div>
   </section>
 
   <!-- Featured Publications -->
   <section>
     <div class="flex items-center justify-between mb-6">
-      <h2 class="text-2xl font-bold text-[var(--text-primary)]">Featured Publications</h2>
-      <a href="/publications" class="text-sm font-medium hover:underline">View all →</a>
+      <h2 class="text-2xl font-bold text-[var(--text-primary)]">
+        Featured Publications
+      </h2>
+      <a href="/publications" class="text-sm font-medium hover:underline"
+        >View all →</a
+      >
     </div>
-    
+
     <div class="space-y-4">
-      {featuredPubs.map((pub) => (
-        <article class="card">
-          <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-2">
-            {pub.data.title}
-          </h3>
-          <p class="text-sm text-[var(--text-secondary)] mb-2">
-            {pub.data.authors.join(', ')}
-          </p>
-          <p class="text-sm text-[var(--color-primary-600)] dark:text-[var(--color-primary-400)]">
-            {pub.data.venue} ({pub.data.year})
-          </p>
-          {pub.data.abstract && (
-            <p class="text-sm text-[var(--text-secondary)] mt-3 line-clamp-2">
-              {pub.data.abstract}
+      {
+        featuredPubs.map((pub) => (
+          <article class="card">
+            <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-2">
+              {pub.data.title}
+            </h3>
+            <p class="text-sm text-[var(--text-secondary)] mb-2">
+              {pub.data.authors.join(", ")}
             </p>
-          )}
-          <div class="flex gap-3 mt-4">
-            {pub.data.doi && (
-              <a href={`https://doi.org/${pub.data.doi}`} target="_blank" class="text-xs px-3 py-1 rounded bg-[var(--bg-primary)] border border-[var(--border-color)] hover:border-[var(--color-primary-500)] no-underline">
-                DOI
-              </a>
+            <p class="text-sm text-[var(--color-primary-600)] dark:text-[var(--color-primary-400)]">
+              {pub.data.venue} ({pub.data.year})
+            </p>
+            {pub.data.abstract && (
+              <p class="text-sm text-[var(--text-secondary)] mt-3 line-clamp-2">
+                {pub.data.abstract}
+              </p>
             )}
-            {pub.data.code && (
-              <a href={pub.data.code} target="_blank" class="text-xs px-3 py-1 rounded bg-[var(--bg-primary)] border border-[var(--border-color)] hover:border-[var(--color-primary-500)] no-underline">
-                Code
-              </a>
-            )}
-            {pub.data.pdf && (
-              <a href={pub.data.pdf} target="_blank" class="text-xs px-3 py-1 rounded bg-[var(--bg-primary)] border border-[var(--border-color)] hover:border-[var(--color-primary-500)] no-underline">
-                PDF
-              </a>
-            )}
-          </div>
-        </article>
-      ))}
+            <div class="flex gap-3 mt-4">
+              {pub.data.doi && (
+                <a
+                  href={`https://doi.org/${pub.data.doi}`}
+                  target="_blank"
+                  class="text-xs px-3 py-1 rounded bg-[var(--bg-primary)] border border-[var(--border-color)] hover:border-[var(--color-primary-500)] no-underline"
+                >
+                  DOI
+                </a>
+              )}
+              {pub.data.code && (
+                <a
+                  href={pub.data.code}
+                  target="_blank"
+                  class="text-xs px-3 py-1 rounded bg-[var(--bg-primary)] border border-[var(--border-color)] hover:border-[var(--color-primary-500)] no-underline"
+                >
+                  Code
+                </a>
+              )}
+              {pub.data.pdf && (
+                <a
+                  href={pub.data.pdf}
+                  target="_blank"
+                  class="text-xs px-3 py-1 rounded bg-[var(--bg-primary)] border border-[var(--border-color)] hover:border-[var(--color-primary-500)] no-underline"
+                >
+                  PDF
+                </a>
+              )}
+            </div>
+          </article>
+        ))
+      }
     </div>
   </section>
+
+  <!-- Experience Preview -->
+  {
+    author.experience && author.experience.length > 0 && (
+      <section class="mb-12">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-bold text-[var(--text-primary)]">
+            Experience
+          </h2>
+          <a href="/experience" class="text-sm font-medium hover:underline">
+            View full CV →
+          </a>
+        </div>
+
+        <div class="space-y-4">
+          {author.experience.slice(0, 2).map((exp) => (
+            <div class="flex gap-4 items-start">
+              <div class="w-2 h-2 mt-2 rounded-full bg-[var(--color-primary-500)] shrink-0" />
+              <div>
+                <h3 class="font-semibold text-[var(--text-primary)]">
+                  {exp.role}
+                </h3>
+                <p class="text-[var(--text-secondary)]">{exp.organization}</p>
+                <p class="text-sm text-[var(--text-secondary)]">
+                  {exp.start} - {exp.end}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
 
   <!-- Education Preview -->
   <section>
     <div class="flex items-center justify-between mb-6">
       <h2 class="text-2xl font-bold text-[var(--text-primary)]">Education</h2>
-      <a href="/experience" class="text-sm font-medium hover:underline">View full CV →</a>
     </div>
-    
+
     <div class="space-y-4">
-      {author.education.slice(0, 2).map((edu) => (
-        <div class="flex gap-4 items-start">
-          <div class="w-2 h-2 mt-2 rounded-full bg-[var(--color-primary-500)] shrink-0"></div>
-          <div>
-            <h3 class="font-semibold text-[var(--text-primary)]">{edu.degree}</h3>
-            <p class="text-[var(--text-secondary)]">{edu.institution}</p>
-            <p class="text-sm text-[var(--text-secondary)]">{edu.start} - {edu.end}</p>
+      {
+        author.education.slice(0, 2).map((edu: any) => (
+          <div class="flex gap-4 items-start">
+            <div class="w-2 h-2 mt-2 rounded-full bg-[var(--color-primary-500)] shrink-0" />
+            <div>
+              <h3 class="font-semibold text-[var(--text-primary)]">
+                {edu.degree}
+              </h3>
+              <p class="text-[var(--text-secondary)]">{edu.institution}</p>
+              {(edu.start || edu.end) && (
+                <p class="text-sm text-[var(--text-secondary)]">
+                  {edu.start ? `${edu.start} - ` : ""}
+                  {edu.end || ""}
+                </p>
+              )}
+            </div>
           </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </section>
 </Base>
