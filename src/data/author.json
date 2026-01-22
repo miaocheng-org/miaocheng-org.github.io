@@ -4,7 +4,7 @@
   "tagline": "Assistant Professor at Tohoku University",
   "bio": "Assistant Professor at Research Institute of Electrical Communication, Tohoku University. Research interests include Social Neuroscience and Nonverbal Communication.",
   "avatar": "/avatar.jpg",
-  "email": "miao.cheng@riec.tohoku.ac.jp",
+  "email": "cheng@tohoku.ac.jp",
   "location": "Sendai, Japan",
   "affiliations": [
     {
@@ -26,53 +26,25 @@
   "education": [
     {
       "degree": "PhD in Psychology",
-      "institution": "University of Hong Kong",
-      "start": "2022",
-      "end": "Present",
-      "summary": "Research on emotion recognition from body motion using graph convolutional networks."
+      "institution": "University of Hong Kong"
     },
     {
-      "degree": "MS Computer Science",
-      "institution": "Your University",
-      "start": "2020",
-      "end": "2022"
-    },
-    {
-      "degree": "BS Computer Science",
-      "institution": "Your University",
-      "start": "2016",
-      "end": "2020"
+      "degree": "MS in Psychology",
+      "institution": "Sun Yat-sen University"
     }
   ],
   "experience": [
     {
-      "role": "Research Assistant",
-      "organization": "Tohoku University",
-      "start": "2022",
-      "end": "Present",
-      "summary": "Conducting research on affective computing and motion analysis."
-    }
-  ],
-  "skills": [
-    {
-      "name": "Python",
-      "level": 5
+      "role": "Assistant Professor",
+      "organization": ", Research Institute of Electrical Communication, Interdisciplinary ICT Research Center for Cyber and Real Spaces, Tohoku University",
+      "start": "2021",
+      "end": "Present"
     },
     {
-      "name": "PyTorch",
-      "level": 5
-    },
-    {
-      "name": "Graph Neural Networks",
-      "level": 4
-    },
-    {
-      "name": "Computer Vision",
-      "level": 4
-    },
-    {
-      "name": "Machine Learning",
-      "level": 5
+      "role": "Associate Researcher",
+      "organization": "NTT Communication Science Laboratories",
+      "start": "2018",
+      "end": "2021"
     }
   ]
 }
