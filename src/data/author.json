@@ -17,6 +17,11 @@
       "name": "Google Scholar",
       "url": "https://scholar.google.com/citations?user=IQ3GHacAAAAJ&hl=en",
       "icon": "scholar"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/miao-cheng-0374845b/",
+      "icon": "linkedin"
     }
   ],
   "interests": [
